@@ -1,18 +1,39 @@
-.topnav {
-    background-color: #333;
-    overflow: hidden;
+/* Style the navigation menu */
+.navbar {
+  width: 100%;
+  background-color: #555;
+  overflow: auto;
+  box-sizing: border-box;
 }
 
-.topnav a {
-    float: left;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
+/* Navigation links */
+.navbar button {
+  float: left;
+  padding: 12px;
+  color: white;
+  background-color: rgb(28, 59, 59);
+  text-decoration: none;
+  font-size: 17px;
+  width: 33.33%; /* Four equal-width links. If you have two links, use 50%, and 33.33% for three links, etc.. */
+  text-align: center; /* If you want the text to be centered */
 }
 
-.topnav a.active {
-    background-color: #4CAF50;
-    color: white;
+/* Add a background color on mouse-over */
+.navbar button:hover {
+  background-color: #000;
+}
+
+/* Style the current/active link */
+.navbar button:hover {
+  background-color: #84a785;
+}
+
+/* Add responsiveness - on screens less than 500px, make the navigation links appear on top of each other, instead of next to each other */
+@media screen and (max-width: 500px) {
+  .navbar button {
+    float: none;
+    display: block;
+    width: 33.33%;
+    text-align: left; /* If you want the text to be left-aligned on small screens */
   }
+}
