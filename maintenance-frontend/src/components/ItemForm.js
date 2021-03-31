@@ -8,7 +8,7 @@ class ItemForm extends React.Component {
     category: "",
     date: "",
     description: "",
-    // price: "",
+    price: null,
     image:""
   };
 
@@ -19,9 +19,9 @@ class ItemForm extends React.Component {
     let newItem = {
         name: this.state.name,
         category: this.state.category,
-        price: 0,
         date: this.state.date,
         description: this.state.description,
+        price: this.state.price,
         image: this.state.image
     }
 
@@ -37,11 +37,11 @@ class ItemForm extends React.Component {
             this.props.addNewItem(newItem)
             this.setState({
                 name: "",
-                image: "",
-                house: "",
-                price: "",
                 category: "",
-                date: ""
+                date: "",
+                description: "",
+                price: "",
+                image: ""
 
             })
         })
@@ -105,6 +105,16 @@ class ItemForm extends React.Component {
               className="form-control"
               id="item-image"
               placeholder="Can Edit Later"
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="item-price">price: </label>
+            <input
+              onChange={(e) => this.setState({ price: e.target.value })}
+              type="text"
+              className="form-control"
+              id="item-price"
+              placeholder="Price of Item"
             />
           </div>
           <button type="submit" className="btn btn-primary">
