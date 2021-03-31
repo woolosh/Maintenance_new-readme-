@@ -14,9 +14,9 @@ const ItemCard = props =>{
           </Card.Text>
         </Card.Body>
         <ListGroup className="list-group-flush">
-          <ListGroupItem>${props.item.price}</ListGroupItem>
+          <ListGroupItem>{props.item.date}</ListGroupItem>
           <ListGroupItem>{props.item.category}</ListGroupItem>
-          <ListGroupItem>dwdd</ListGroupItem>
+          <ListGroupItem>${props.item.price}</ListGroupItem>
         </ListGroup>
         {/* <Card.Body>
           <Card.Link href="#">Card Link</Card.Link>
