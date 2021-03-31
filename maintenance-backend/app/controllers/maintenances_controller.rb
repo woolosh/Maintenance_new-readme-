@@ -24,6 +24,6 @@ class MaintenancesController < ApplicationController
     private
 
     def maintenance_params
-        params.require(:maintenance).permit()
+        params.require(:maintenance).permit(:description, :price, :date)
     end
 end
